@@ -1,0 +1,135 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, appendix, bm, graphicx, hyperref, mathrsfs, geometry}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{subfiles}
+\usepackage{fontspec}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\linespread{1.5}
+\pagestyle{plain}
+\geometry{a4paper, scale=0.8}
+
+% 定义书写Kotlin时的listings style
+\lstdefinelanguage{Kotlin}{
+  comment=[l]{//},
+  commentstyle={\color{gray}\ttfamily},
+  emph={filter, first, firstOrNull, forEach, lazy, map, mapNotNull, println},
+  emphstyle={\color{OrangeRed}},
+  identifierstyle=\color{black},
+  keywords={!in, !is, abstract, actual, annotation, as, as?, break, by, catch, class, companion, const, constructor, continue, crossinline, data, delegate, do, dynamic, else, enum, expect, external, false, field, file, final, finally, for, fun, get, if, import, in, infix, init, inline, inner, interface, internal, is, lateinit, noinline, null, object, open, operator, out, override, package, param, private, property, protected, public, receiveris, reified, return, return@, sealed, set, setparam, super, suspend, tailrec, this, throw, true, try, typealias, typeof, val, var, vararg, when, where, while},
+  keywordstyle={\color{NavyBlue}\bfseries},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[s]{"""*}{*"""},
+  ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+  ndkeywordstyle={\color{BurntOrange}\bfseries},
+  sensitive=true,
+  breaklines=true,
+  showstringspaces=false,
+  stringstyle={\color{ForestGreen}\ttfamily},
+}
+
+% 定义书写C#时的listings style
+\lstdefinestyle{csharp}{
+    language=[sharp]c,
+    breaklines=true,
+    basicstyle=\ttfamily,
+    keywordstyle=\bfseries\color{violet},
+    emphstyle=\bfseries\color{blue},
+    morekeywords={required, get, set, init, async, await},
+    showstringspaces=false,
+}
+
+\begin{document}
+
+\begin{titlepage}
+% 标题
+\begin{center}
+    \Huge{\textbf{移动互联网技术及应用}}
+
+    \vspace{2em}
+
+    \Huge{\textbf{大作业报告}}
+
+    \vspace{5em}
+    
+    \Large{\textbf{题目：} \underline{在线多媒体播放系统的设计与实现}}
+
+    \vspace{3em}
+    
+    \large{\textbf{类型：} \underline{应用系统设计实现}}
+
+\end{center}
+
+\vspace{6em}
+
+% 个人信息
+\begin{center}
+    \large{\makebox[4em][c]{姓名：} \underline{\makebox[8em][c]{任昌骏}}}
+    
+    \large{\makebox[4em][c]{班级：} \underline{\makebox[8em][c]{2021211308}}}
+
+    \large{\makebox[4em][c]{学号：} \underline{\makebox[8em][c]{2021211180}}}
+\end{center}
+
+% 封底
+\vspace{8em}
+
+\begin{center}
+    \Large{2024年6月}
+\end{center}
+\end{titlepage}
+
+\clearpage
+
+% 目录
+% 目录的页码和正文的页码不一致
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\tableofcontents
+
+\clearpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\section{引言}
+
+随着科技的发展，在移动终端上查看存储在家庭内部服务器内的多媒体资源成为一个越来越常见的需求。在本次的课程作业中，我们便设计了一个基于Androin终端的在线多媒体播放器，系统名称\textbf{Chiara}。在本篇报告中，我们将综述在系统中涉及的相关技术、分析该系统的功能需求，介绍该系统的设计与实现细节，并进一步说明项目后续可能的扩展方向。在报告的最后，我们将介绍在设计和实现该系统过程中的总结和体会。
+
+\clearpage
+
+\subfile{ch01-technology}
+
+\clearpage
+
+\subfile{ch02-requirements}
+
+\clearpage
+
+\subfile{ch03-design}
+
+\clearpage
+
+\subfile{ch04-server}
+
+\clearpage
+
+\subfile{ch05-extensions}
+
+\clearpage
+
+\subfile{ch06-summary}
+
+\clearpage
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\end{document}
