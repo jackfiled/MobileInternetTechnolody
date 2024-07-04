@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+    db:
+        image: postgres:15
+        container_name: chiara-db
+        environment:
+            POSTGRES_PASSWORD: 12345678
+
+    chiara:
+        image: chiara:latest
+        container_name: chiara-app
+        depends_on:
+            - db
+        environment:
+            TZ: "Asia/Shanghai"
+            ASPNETCORE_ENVIRONMENT: Development
+            ConnectionStrings__Postgres: "Host=db;Database=chiara;Username=postgres;Password=12345678"
+            Repository__Path: "/data"
+            Chiara__TemporaryDirectory: "/tmp/"
+        volumes:
+            - /home/ricardo/Documents/Code/CSharp/Chiara/Chiara.Tests/Data:/data/music
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.chiara.rule=Host(`chiara.jackfiled.icu`)"
+            - "traefik.http.services.chiara.loadbalancer.server.port=8080"
+            - "com.centurylinklabs.watchtower.enable=true"
+

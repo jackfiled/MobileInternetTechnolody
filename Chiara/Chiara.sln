@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiara", "Chiara\Chiara.csproj", "{06FB2F9E-6C0A-4D73-A1B0-D60B116348FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiara.Tests", "Chiara.Tests\Chiara.Tests.csproj", "{DD3DCD44-D661-4DE1-B2FD-170D5504361A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{E6D11D0F-E915-41B5-86D4-CCEA8C6CF3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnitomySharp", "AnitomySharp\AnitomySharp.csproj", "{4893AB7B-D50D-4C06-9267-E14F28B510E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".gitea", ".gitea", "{38E1A429-AC02-4C7A-AF97-338D9FF30A0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{DB9235C8-F148-47B8-A205-BCF978750D73}"
+	ProjectSection(SolutionItems) = preProject
+		.gitea\workflows\build.yaml = .gitea\workflows\build.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06FB2F9E-6C0A-4D73-A1B0-D60B116348FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FB2F9E-6C0A-4D73-A1B0-D60B116348FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FB2F9E-6C0A-4D73-A1B0-D60B116348FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FB2F9E-6C0A-4D73-A1B0-D60B116348FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3DCD44-D661-4DE1-B2FD-170D5504361A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3DCD44-D661-4DE1-B2FD-170D5504361A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3DCD44-D661-4DE1-B2FD-170D5504361A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3DCD44-D661-4DE1-B2FD-170D5504361A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4893AB7B-D50D-4C06-9267-E14F28B510E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4893AB7B-D50D-4C06-9267-E14F28B510E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4893AB7B-D50D-4C06-9267-E14F28B510E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4893AB7B-D50D-4C06-9267-E14F28B510E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4893AB7B-D50D-4C06-9267-E14F28B510E9} = {E6D11D0F-E915-41B5-86D4-CCEA8C6CF3A3}
+		{DB9235C8-F148-47B8-A205-BCF978750D73} = {38E1A429-AC02-4C7A-AF97-338D9FF30A0B}
+	EndGlobalSection
+EndGlobal
